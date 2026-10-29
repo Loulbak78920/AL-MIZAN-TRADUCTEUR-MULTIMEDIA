@@ -1,0 +1,875 @@
+{
+  "version": 1,
+  "doctrine": "TRADUCTEUR_MULTIMEDIA_AL_MIZAN",
+  "statut": "OPÉRATIONNEL_LOCAL",
+  "genere_le_utc": "2026-10-29T13:28:16Z",
+  "auteur": "M. Ahmed EL BAHLOUL (IMAM8MAHDI)",
+  "invariants": {
+    "dt_kernel": 135097021.3359375,
+    "bride_mizan": 0.6225,
+    "ligne_ref": 0.122,
+    "plafond_effectif": 0.6015,
+    "seuil_parole": 0.08,
+    "partage": 0.5,
+    "riba": 0.0
+  },
+  "source": {
+    "id": "-XKP4WKXUpI",
+    "url": "https://www.youtube.com/watch?v=-XKP4WKXUpI",
+    "horodatage_utc": "2026-10-29T12:50:33Z",
+    "titre": "L’IA vient-elle de tuer les mathématiques ?",
+    "auteur_video": "Numerama",
+    "duree_s": 1950,
+    "transcript": {
+      "etat": "absent",
+      "detail": "0 octet sur json3, srv3 et xml",
+      "mesures": [
+        "&fmt=json3=0",
+        "&fmt=srv3=0",
+        "xml=0"
+      ]
+    },
+    "avertissements": [
+      "aucun en-tete de chapitres : horodatages pris dans toute la description",
+      "timedtext repond sans contenu : le transcript est tenu pour absent"
+    ],
+    "sha256_fiche": "126c9c3a6687bc43ac241e9c6b835042222353f0b6e564362ab0a6b93e9f971c"
+  },
+  "equations": [
+    {
+      "id": "EQ-01",
+      "titre_fr": "Trame harmonique déterministe",
+      "statut": "OPÉRATIONNEL",
+      "enonce": "Pour chaque chapitre k à s_k secondes : τ_k = round((s_k + 1)·dt, 3) ticks ; id_k = « TRM-WEBRTC_MULTIMODAL- » + SHA-256(id_vidéo|s_k|titre_k)[:10] ; v = (0.50, 0.02, 1.00, 0.9995, 0.05, 0.85, 1.00, 0.50, 0.00, 0.01, 0.6015, 0.6225) ; sceau_k = SHA-256(canonique(id_k, τ_k, v, payload_k)). Variante déterministe du pont : l'original horodate sur l'horloge murale.",
+      "resultat": "16 trames · ids uniques = True · sceau de la dernière = 52f624ed85bd…"
+    },
+    {
+      "id": "EQ-02",
+      "titre_fr": "Composition et entropie du chemin",
+      "statut": "MESURÉ",
+      "enonce": "d_k = s_{k+1} − s_k (d_N = D − s_N), p_k = d_k / D ; Σ p_k = 1. H = −Σ_{p_k>0} p_k ln p_k ; H_norm = H / ln N.",
+      "resultat": "Σp = 1 · H = 2.700576 · H_norm = 0.974027"
+    },
+    {
+      "id": "EQ-03",
+      "titre_fr": "Seuil de parole",
+      "statut": "MESURÉ",
+      "enonce": "P = { k | p_k ≥ θ }, θ = 0.08. Part nommée = Σ_{k∈P} p_k. Seuls les segments qui atteignent le seuil sont prononcés dans la lecture humaine.",
+      "resultat": "3 segments ≥ 8 % · part nommée = 0.305641"
+    },
+    {
+      "id": "EQ-04",
+      "titre_fr": "Ignorance bornée sur le chemin",
+      "statut": "SIMULÉ",
+      "enonce": "I_0 = 1 ; C_k = Σ_{j≤k} p_j ; I_brut,k = 1 − C_k ; cible_k = max(0.122 ; I_brut,k) ; γ_k = min(0.6225 ; max(0 ; (I_{k−1} − cible_k) / (I_{k−1} − 0.122 + ε))) ; I_k = 0.122 + (I_{k−1} − 0.122)(1 − γ_k). Ainsi I_k ≥ cible_k et I_k ≥ 0.122 : la complétude tend vers 1 − 0.122 sans jamais 1.",
+      "resultat": "I₁₆ = 0.124126 · complétude = 0.875874 · plancher respecté = True"
+    },
+    {
+      "id": "EQ-05",
+      "titre_fr": "Traduction humaine déterministe",
+      "statut": "OPÉRATIONNEL",
+      "enonce": "T = Phrase((titre_k, p_k)_{k∈P triés par p décroissant} ; résidu = 1 − part nommée ; H_norm). T est déterministe et falsifiable : chaque titre prononcé est celui de la source, aucune intention ni entité n'est ajoutée.",
+      "resultat": "3 titres nommés · rejeu identique = True"
+    },
+    {
+      "id": "EQ-06",
+      "titre_fr": "Continuité dossier ↔ site",
+      "statut": "MESURÉ",
+      "enonce": "K = Π_{a∈A} 1_{page fr, en, ar présente} · 1_{route servie} · 1_{sitemap présent} · 1_{test présent}. La capacité n'est dite publiée que si K = 1 ; sinon elle reste « spécifiée non publiée ».",
+      "resultat": "K = 5/5 · publiable = True"
+    },
+    {
+      "id": "EQ-07",
+      "titre_fr": "Scellement et antériorité",
+      "statut": "OPÉRATIONNEL",
+      "enonce": "S = SHA-256(canonique(noyau)) ; racine Merkle R = Merkle(SHA-256(fichier_i)) sur la fiche source, le module, le générateur, les trois pages et le JSON. Le manifeste prouve l'intégrité et l'ordre ; il ne prouve pas à lui seul une date légalement opposable (ancre tierce : OpenTimestamps, dépôt ou DOI).",
+      "resultat": "sceau du noyau = 7ed2c8a84fbb2b53…"
+    }
+  ],
+  "chapitres": [
+    {
+      "index": 1,
+      "debut": "00:00",
+      "debut_s": 0,
+      "titre_source": "- Plongée dans la vie d'un mathématicien en 2026",
+      "titre": "Plongée dans la vie d'un mathématicien en 2026",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 135097021.336,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-4fa6caf1ec",
+      "sha256": "fbdb01bae2934c249d4ac630eb9dd8855f1f6e2113457f02a5984e9db95855fe",
+      "duree_s": 278,
+      "p": 0.142564102564,
+      "ignorance_apres": 0.857435897436,
+      "completude": 0.142564102564
+    },
+    {
+      "index": 2,
+      "debut": "04:38",
+      "debut_s": 278,
+      "titre_source": "- Un mathématicien, c'est quoi ?",
+      "titre": "Un mathématicien, c'est quoi ?",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 37692068952.727,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-1f643f35b1",
+      "sha256": "4135d2643ce9a26b887cd95f2c6da492d419ca69da33c854ff3ecc2768ef7045",
+      "duree_s": 96,
+      "p": 0.049230769231,
+      "ignorance_apres": 0.808205128205,
+      "completude": 0.191794871795
+    },
+    {
+      "index": 3,
+      "debut": "06:14",
+      "debut_s": 374,
+      "titre_source": "- L'IA s'attaque aux maths",
+      "titre": "L'IA s'attaque aux maths",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 50661383000.977,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-6a789a041c",
+      "sha256": "8e42ef5387b87fbc759889dcaebd95ecd563409669ffb86ea77fd95c3103532e",
+      "duree_s": 129,
+      "p": 0.066153846154,
+      "ignorance_apres": 0.742051282051,
+      "completude": 0.257948717949
+    },
+    {
+      "index": 4,
+      "debut": "08:23",
+      "debut_s": 503,
+      "titre_source": "- Le vrai but des entreprises d'IA : science ou marketing ?",
+      "titre": "Le vrai but des entreprises d'IA : science ou marketing ?",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 68088898753.312,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-91f3ba33f7",
+      "sha256": "03336113b5ded3df7ef01073e01a7357ad427f2391fa208dbd1439cf9a0a5089",
+      "duree_s": 157,
+      "p": 0.080512820513,
+      "ignorance_apres": 0.661538461538,
+      "completude": 0.338461538462
+    },
+    {
+      "index": 5,
+      "debut": "11:00",
+      "debut_s": 660,
+      "titre_source": "- Le métier de mathématicien doit évoluer",
+      "titre": "Le métier de mathématicien doit évoluer",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 89299131103.055,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-e12ffce802",
+      "sha256": "741a365b3a030b40f27297fb42e9e9b4ddbad93fc70daeb3279f2bc2ec703860",
+      "duree_s": 87,
+      "p": 0.044615384615,
+      "ignorance_apres": 0.616923076923,
+      "completude": 0.383076923077
+    },
+    {
+      "index": 6,
+      "debut": "12:27",
+      "debut_s": 747,
+      "titre_source": "- Décoder des mathématiques des IA",
+      "titre": "Décoder des mathématiques des IA",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 101052571959.281,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-f96102765a",
+      "sha256": "8c0b95accfd3cb191cdb954e9c65cb8653eab102c8865ac9042af087fb87e1da",
+      "duree_s": 120,
+      "p": 0.061538461538,
+      "ignorance_apres": 0.555384615385,
+      "completude": 0.444615384615
+    },
+    {
+      "index": 7,
+      "debut": "14:27",
+      "debut_s": 867,
+      "titre_source": "- Sanctuariser les mathématiques pour les humains ?",
+      "titre": "Sanctuariser les mathématiques pour les humains ?",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 117264214519.594,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-7de2c50aff",
+      "sha256": "68c905907a1f72e3f0a865a175c24f214b1843cebf447d7fb49b7209fbc1622c",
+      "duree_s": 89,
+      "p": 0.045641025641,
+      "ignorance_apres": 0.509743589744,
+      "completude": 0.490256410256
+    },
+    {
+      "index": 8,
+      "debut": "15:56",
+      "debut_s": 956,
+      "titre_source": "- \"Faire le deuil\" des mathématiques qu'on connaît",
+      "titre": "\"Faire le deuil\" des mathématiques qu'on connaît",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 129287849418.492,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-f2d8a3a10d",
+      "sha256": "f67ac6d602d36ed197737852d37ed5c2c2f325e2c388a9a82a3c932d32b8a69e",
+      "duree_s": 153,
+      "p": 0.078461538462,
+      "ignorance_apres": 0.431282051282,
+      "completude": 0.568717948718
+    },
+    {
+      "index": 9,
+      "debut": "18:29",
+      "debut_s": 1109,
+      "titre_source": "- La place des futurs mathématiciens remise en cause ?",
+      "titre": "La place des futurs mathématiciens remise en cause ?",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 149957693682.891,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-533e0cff0e",
+      "sha256": "7d31a08ba13f53a4074ff7879638ccb3f65a37a3ce84c4322b384b199748df78",
+      "duree_s": 153,
+      "p": 0.078461538462,
+      "ignorance_apres": 0.352820512821,
+      "completude": 0.647179487179
+    },
+    {
+      "index": 10,
+      "debut": "21:02",
+      "debut_s": 1262,
+      "titre_source": "- La question du financement de la recherche",
+      "titre": "La question du financement de la recherche",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 170627537947.289,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-22c00fad09",
+      "sha256": "d92ac5437079acf22d55e2e991ee3c78af7f91203936cde39fcc954ac13692d9",
+      "duree_s": 83,
+      "p": 0.042564102564,
+      "ignorance_apres": 0.310256410256,
+      "completude": 0.689743589744
+    },
+    {
+      "index": 11,
+      "debut": "22:25",
+      "debut_s": 1345,
+      "titre_source": "- Des règles pour encadrer tout ça",
+      "titre": "Des règles pour encadrer tout ça",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 181840590718.172,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-f5b2a8b4b7",
+      "sha256": "f01c7fa4c6ab898b18dd97de2bf10080d8ff3130c1972c7af1b90fa5d882c95e",
+      "duree_s": 71,
+      "p": 0.03641025641,
+      "ignorance_apres": 0.273846153846,
+      "completude": 0.726153846154
+    },
+    {
+      "index": 12,
+      "debut": "23:36",
+      "debut_s": 1416,
+      "titre_source": "- Des désaccords sur la reconnaissance : le cas OpenAI / Buckmaster",
+      "titre": "Des désaccords sur la reconnaissance : le cas OpenAI / Buckmaster",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 191432479233.023,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-79de545bf1",
+      "sha256": "af89ebd741d6ad2b62052719710a7feb12a38f9309caeda51da947ae6fa8015d",
+      "duree_s": 92,
+      "p": 0.047179487179,
+      "ignorance_apres": 0.226666666667,
+      "completude": 0.773333333333
+    },
+    {
+      "index": 13,
+      "debut": "25:08",
+      "debut_s": 1508,
+      "titre_source": "- \"Prendre le bateau\" ou apprendre à faire ce métier avec l'IA",
+      "titre": "\"Prendre le bateau\" ou apprendre à faire ce métier avec l'IA",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 203861405195.93,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-f66605d9c5",
+      "sha256": "e0af27e66c5662bfb1131c7bb17751923f31595a7ad53817f8a0b1f9361c0597",
+      "duree_s": 161,
+      "p": 0.082564102564,
+      "ignorance_apres": 0.161511666667,
+      "completude": 0.838488333333
+    },
+    {
+      "index": 14,
+      "debut": "27:49",
+      "debut_s": 1669,
+      "titre_source": "- Combiner humain et IA pour avancer en recherche",
+      "titre": "Combiner humain et IA pour avancer en recherche",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 225612025631.016,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-f2b0f9774c",
+      "sha256": "2d864a83212ea17437d78fbedde493ec1e499c7d947c50e94951881d20b4cf69",
+      "duree_s": 86,
+      "p": 0.044102564103,
+      "ignorance_apres": 0.136915654167,
+      "completude": 0.863084345833
+    },
+    {
+      "index": 15,
+      "debut": "29:15",
+      "debut_s": 1755,
+      "titre_source": "- Est-ce la fin des maths ?",
+      "titre": "Est-ce la fin des maths ?",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 237230369465.906,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-759b91bf3a",
+      "sha256": "25669e43bb9e4c3b36b7298619474c2a4eac0677a025f68b0228bb930387db4b",
+      "duree_s": 109,
+      "p": 0.055897435897,
+      "ignorance_apres": 0.127630659448,
+      "completude": 0.872369340552
+    },
+    {
+      "index": 16,
+      "debut": "31:04",
+      "debut_s": 1864,
+      "titre_source": "- Bientôt l'IA ira dans d'autres domaines (chimie, physique ...)",
+      "titre": "Bientôt l'IA ira dans d'autres domaines (chimie, physique ...)",
+      "priorite": 2,
+      "technologie_source": "WEBRTC_MULTIMODAL",
+      "horodatage_dt": 251955944791.523,
+      "vecteur_12d": [
+        0.5,
+        0.02,
+        1.0,
+        0.9995,
+        0.05,
+        0.85,
+        1.0,
+        0.5,
+        0.0,
+        0.01,
+        0.6015,
+        0.6225
+      ],
+      "id": "TRM-WEBRTC_MULTIMODAL-2c0393c353",
+      "sha256": "52f624ed85bdada8726172ed9045d84098f814377d47da893db648a13b46c21c",
+      "duree_s": 86,
+      "p": 0.044102564103,
+      "ignorance_apres": 0.124125573942,
+      "completude": 0.875874426058
+    }
+  ],
+  "trajectoire": {
+    "ignorance_initiale": 1.0,
+    "ignorance_finale": 0.124125573942,
+    "completude_finale": 0.875874426058,
+    "plancher_doctrinal": 0.122,
+    "completude_parfaite_atteinte": false,
+    "completude_parfaite_par_construction": false,
+    "cycles": 16,
+    "etapes": [
+      {
+        "cycle": 1,
+        "couverture_cumulee": 0.142564102564,
+        "ignorance_brute": 0.857435897436,
+        "cible": 0.857435897436,
+        "gamma": 0.162373693125,
+        "ignorance_avant": 1.0,
+        "ignorance_apres": 0.857435897436,
+        "completude": 0.142564102564
+      },
+      {
+        "cycle": 2,
+        "couverture_cumulee": 0.191794871795,
+        "ignorance_brute": 0.808205128205,
+        "cible": 0.808205128205,
+        "gamma": 0.066940938568,
+        "ignorance_avant": 0.857435897436,
+        "ignorance_apres": 0.808205128205,
+        "completude": 0.191794871795
+      },
+      {
+        "cycle": 3,
+        "couverture_cumulee": 0.257948717949,
+        "ignorance_brute": 0.742051282051,
+        "cible": 0.742051282051,
+        "gamma": 0.096405350871,
+        "ignorance_avant": 0.808205128205,
+        "ignorance_apres": 0.742051282051,
+        "completude": 0.257948717949
+      },
+      {
+        "cycle": 4,
+        "couverture_cumulee": 0.338461538462,
+        "ignorance_brute": 0.661538461538,
+        "cible": 0.661538461538,
+        "gamma": 0.129848647755,
+        "ignorance_avant": 0.742051282051,
+        "ignorance_apres": 0.661538461538,
+        "completude": 0.338461538462
+      },
+      {
+        "cycle": 5,
+        "couverture_cumulee": 0.383076923077,
+        "ignorance_brute": 0.616923076923,
+        "cible": 0.616923076923,
+        "gamma": 0.082691759338,
+        "ignorance_avant": 0.661538461538,
+        "ignorance_apres": 0.616923076923,
+        "completude": 0.383076923077
+      },
+      {
+        "cycle": 6,
+        "couverture_cumulee": 0.444615384615,
+        "ignorance_brute": 0.555384615385,
+        "cible": 0.555384615385,
+        "gamma": 0.124339446689,
+        "ignorance_avant": 0.616923076923,
+        "ignorance_apres": 0.555384615385,
+        "completude": 0.444615384615
+      },
+      {
+        "cycle": 7,
+        "couverture_cumulee": 0.490256410256,
+        "ignorance_brute": 0.509743589744,
+        "cible": 0.509743589744,
+        "gamma": 0.105312980712,
+        "ignorance_avant": 0.555384615385,
+        "ignorance_apres": 0.509743589744,
+        "completude": 0.490256410256
+      },
+      {
+        "cycle": 8,
+        "couverture_cumulee": 0.568717948718,
+        "ignorance_brute": 0.431282051282,
+        "cible": 0.431282051282,
+        "gamma": 0.202354185954,
+        "ignorance_avant": 0.509743589744,
+        "ignorance_apres": 0.431282051282,
+        "completude": 0.568717948718
+      },
+      {
+        "cycle": 9,
+        "couverture_cumulee": 0.647179487179,
+        "ignorance_brute": 0.352820512821,
+        "cible": 0.352820512821,
+        "gamma": 0.253689272094,
+        "ignorance_avant": 0.431282051282,
+        "ignorance_apres": 0.352820512821,
+        "completude": 0.647179487179
+      },
+      {
+        "cycle": 10,
+        "couverture_cumulee": 0.689743589744,
+        "ignorance_brute": 0.310256410256,
+        "cible": 0.310256410256,
+        "gamma": 0.184403465896,
+        "ignorance_avant": 0.352820512821,
+        "ignorance_apres": 0.310256410256,
+        "completude": 0.689743589744
+      },
+      {
+        "cycle": 11,
+        "couverture_cumulee": 0.726153846154,
+        "ignorance_brute": 0.273846153846,
+        "cible": 0.273846153846,
+        "gamma": 0.193407790793,
+        "ignorance_avant": 0.310256410256,
+        "ignorance_apres": 0.273846153846,
+        "completude": 0.726153846154
+      },
+      {
+        "cycle": 12,
+        "couverture_cumulee": 0.773333333333,
+        "ignorance_brute": 0.226666666667,
+        "cible": 0.226666666667,
+        "gamma": 0.310705842621,
+        "ignorance_avant": 0.273846153846,
+        "ignorance_apres": 0.226666666667,
+        "completude": 0.773333333333
+      },
+      {
+        "cycle": 13,
+        "couverture_cumulee": 0.855897435897,
+        "ignorance_brute": 0.144102564103,
+        "cible": 0.144102564103,
+        "gamma": 0.6225,
+        "ignorance_avant": 0.226666666667,
+        "ignorance_apres": 0.161511666667,
+        "completude": 0.838488333333
+      },
+      {
+        "cycle": 14,
+        "couverture_cumulee": 0.9,
+        "ignorance_brute": 0.1,
+        "cible": 0.122,
+        "gamma": 0.6225,
+        "ignorance_avant": 0.161511666667,
+        "ignorance_apres": 0.136915654167,
+        "completude": 0.863084345833
+      },
+      {
+        "cycle": 15,
+        "couverture_cumulee": 0.955897435897,
+        "ignorance_brute": 0.044102564103,
+        "cible": 0.122,
+        "gamma": 0.6225,
+        "ignorance_avant": 0.136915654167,
+        "ignorance_apres": 0.127630659448,
+        "completude": 0.872369340552
+      },
+      {
+        "cycle": 16,
+        "couverture_cumulee": 1.0,
+        "ignorance_brute": 0.0,
+        "cible": 0.122,
+        "gamma": 0.6225,
+        "ignorance_avant": 0.127630659448,
+        "ignorance_apres": 0.124125573942,
+        "completude": 0.875874426058
+      }
+    ]
+  },
+  "agregats": {
+    "nb_chapitres": 16,
+    "duree_s": 1950,
+    "entropie": 2.700575681514,
+    "entropie_norm": 0.974026785816,
+    "seuil_parole": 0.08,
+    "nb_nommes": 3,
+    "part_nommee": 0.305641025641,
+    "residu_nomme": 0.694358974359
+  },
+  "traduction": {
+    "langue_source": "fr",
+    "phrase": "Le chemin va de « Plongée dans la vie d'un mathématicien en 2026 » (14 %) à « Bientôt l'IA ira dans d'autres domaines (chimie, physique ...) » (4 %) en 16 étapes ; 3 segments portent au moins 8 % du temps (31 % du chemin) : « Plongée dans la vie d'un mathématicien en 2026 » (14 %) ; « \"Prendre le bateau\" ou apprendre à faire ce métier avec l'IA » (8 %) ; « Le vrai but des entreprises d'IA : science ou marketing ? » (8 %). L'ignorance résiduelle se stabilise à 12,4 %, au-dessus du plancher doctrinal de 12,2 % ; la complétude atteint 87,6 % et ne franchit jamais 100 % : lecture de modèle, pas une mesure de la parole."
+  },
+  "controles": [
+    {
+      "code": "C01",
+      "libelle": "Chapitres ordonnés et bornés",
+      "ok": true,
+      "detail": "16 chapitres ; 0 → 1864 s sur 1950 s"
+    },
+    {
+      "code": "C02",
+      "libelle": "Composition normalisée",
+      "ok": true,
+      "detail": "Σp = 1.000000000000"
+    },
+    {
+      "code": "C03",
+      "libelle": "Durées strictement positives",
+      "ok": true,
+      "detail": "min = 71 s"
+    },
+    {
+      "code": "C04",
+      "libelle": "Entropie normalisée dans [0 ; 1]",
+      "ok": true,
+      "detail": "H = 2.700576 ; H_norm = 0.974027"
+    },
+    {
+      "code": "C05",
+      "libelle": "Horodatage dt conforme",
+      "ok": true,
+      "detail": "τ₁ = 135 097 021.336"
+    },
+    {
+      "code": "C06",
+      "libelle": "Identifiants de trames uniques",
+      "ok": true,
+      "detail": "16 identifiants"
+    },
+    {
+      "code": "C07",
+      "libelle": "Plancher doctrinal respecté",
+      "ok": true,
+      "detail": "min I_k = 0.124126"
+    },
+    {
+      "code": "C08",
+      "libelle": "Ignorance jamais sous la cible mesurée",
+      "ok": true,
+      "detail": "γ max = 0.622500 ≤ 0.6225"
+    },
+    {
+      "code": "C09",
+      "libelle": "Complétude finale bornée",
+      "ok": true,
+      "detail": "complétude = 0.875874 < 1"
+    },
+    {
+      "code": "C10",
+      "libelle": "Titres de source conservés",
+      "ok": true,
+      "detail": "premier = « Plongée dans la vie d'un mathématicien en 2026 »"
+    }
+  ],
+  "resume": {
+    "chapitres": 16,
+    "equations": 7,
+    "controles_ok": 10,
+    "controles_total": 10,
+    "completude_finale": 0.875874426058
+  },
+  "limites": [
+    "La vidéo ne fournit aucun transcript : la parole n'est ni transcrite ni traduite.",
+    "Les titres de chapitres sont cités dans leur langue d'origine (français) ; aucune traduction automatique n'est revendiquée.",
+    "Les équations sont celles du dossier AL-MIZAN, appliquées à des mesures de chapitres ; elles ne sont pas attribuées à la vidéo.",
+    "Le calcul est borné : l'ignorance ne descend jamais sous LIGNE_REF = 0.122, donc la complétude ne vaut jamais 100 %.",
+    "Le manifeste SHA-256 prouve l'intégrité et l'ordre, pas une date légalement opposable."
+  ],
+  "sceau_sha256": "7ed2c8a84fbb2b53c7acb113877e430a1af2182d08af0f100fb17940381b5162",
+  "continuite": {
+    "indicateurs": {
+      "pages": true,
+      "route": true,
+      "json": true,
+      "sitemap": true,
+      "test": true
+    },
+    "indicateurs_ok": 5,
+    "indicateurs_total": 5,
+    "publiable": true
+  },
+  "anteriorite": {
+    "genere_le_utc": "2026-10-29T13:28:16Z",
+    "fichiers": [
+      {
+        "chemin": "donnees/source_video_-XKP4WKXUpI.json",
+        "sha256": "126c9c3a6687bc43ac241e9c6b835042222353f0b6e564362ab0a6b93e9f971c",
+        "octets": 2822
+      },
+      {
+        "chemin": "oeuvre_universelle/traducteur_multimedia.py",
+        "sha256": "453f9f7d841350eb94b693b9f7f138fcb4f0332db8ab6985538a95c84e5b950f",
+        "octets": 23142
+      },
+      {
+        "chemin": "oeuvre_universelle/generer_page_traducteur_multimedia.py",
+        "sha256": "042c7d31db4b116c8b22925c3173d86a69dc556ff3a48c71a504409a29c2646e",
+        "octets": 52092
+      }
+    ],
+    "racine_merkle": "108ea2479fe329bbf8e3ac33fde05c95ee7109b2636c6ffbe7b8a96ffbc87d04",
+    "auteur": "M. Ahmed EL BAHLOUL (IMAM8MAHDI)",
+    "doi_anterieur": "10.5281/zenodo.23554838",
+    "depot": "https://github.com/Loulbak78920/AL-MIZAN-TRADUCTEUR-MULTIMEDIA",
+    "doi_anterieur_resolu": false,
+    "depot_public_resolu": true,
+    "liens_verifies_le_utc": "2026-10-29T13:40:00Z",
+    "preuve_integrite": true,
+    "preuve_date_legale": false,
+    "limite": "Le manifeste prouve l'intégrité et l'ordre des fichiers. Il ne prouve pas à lui seul une date légalement opposable : ancrer la racine via OpenTimestamps, un dépôt public ou un DOI résolvable. Le DOI déclaré renvoyait 404 à la vérification du 2026-10-29 : il ne vaut pas preuve en l'état. Le dépôt public GitHub est accessible."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "titre": "Manifeste d'intégrité et d'antériorité — traducteur multimédia AL-MIZAN",
+  "auteur": "M. Ahmed EL BAHLOUL (IMAM8MAHDI)",
+  "doi_anterieur": "10.5281/zenodo.23554838",
+  "depot": "https://github.com/Loulbak78920/AL-MIZAN-TRADUCTEUR-MULTIMEDIA",
+  "doi_anterieur_resolu": false,
+  "depot_public_resolu": true,
+  "liens_verifies_le_utc": "2026-10-29T13:40:00Z",
+  "source": "https://www.youtube.com/watch?v=-XKP4WKXUpI",
+  "genere_le_utc": "2026-10-29T13:28:16Z",
+  "nb_fichiers": 8,
+  "racine_merkle_sha256": "4b61a4faaf961dd25aec8e114078b41184ecdce5d491638ac9bfd8f342f1c886",
+  "sceau_noyau_sha256": "7ed2c8a84fbb2b53c7acb113877e430a1af2182d08af0f100fb17940381b5162",
+  "fichiers": [
+    {
+      "chemin": "donnees/source_video_-XKP4WKXUpI.json",
+      "sha256": "126c9c3a6687bc43ac241e9c6b835042222353f0b6e564362ab0a6b93e9f971c",
+      "octets": 2822,
+      "mtime_utc": "2026-10-29T12:50:34Z"
+    },
+    {
+      "chemin": "oeuvre_universelle/traducteur_multimedia.py",
+      "sha256": "453f9f7d841350eb94b693b9f7f138fcb4f0332db8ab6985538a95c84e5b950f",
+      "octets": 23142,
+      "mtime_utc": "2026-10-29T12:56:15Z"
+    },
+    {
+      "chemin": "oeuvre_universelle/generer_page_traducteur_multimedia.py",
+      "sha256": "042c7d31db4b116c8b22925c3173d86a69dc556ff3a48c71a504409a29c2646e",
+      "octets": 52092,
+      "mtime_utc": "2026-10-29T13:28:04Z"
+    },
+    {
+      "chemin": "web_cloud/traducteur_multimedia.html",
+      "sha256": "b9bd72592a5f549f10a12926c4fd2c496e0986e35c4cd1343781ae3007e86ee6",
+      "octets": 31616,
+      "mtime_utc": "2026-10-29T13:28:16Z"
+    },
+    {
+      "chemin": "web_cloud/traducteur_multimedia_en.html",
+      "sha256": "2807cadb5de45a613907c61228ae6b3c555be056895d4d4bd35bf04fe0010e0c",
+      "octets": 30876,
+      "mtime_utc": "2026-10-29T13:28:16Z"
+    },
+    {
+      "chemin": "web_cloud/traducteur_multimedia_ar.html",
+      "sha256": "d9d88e4b9c92e6576dfdda1cf284793b513590d21ebf3da15551c985517a5864",
+      "octets": 33488,
+      "mtime_utc": "2026-10-29T13:28:16Z"
+    },
+    {
+      "chemin": "resultats/oeuvre_universelle/traducteur_multimedia.json",
+      "sha256": "ae9a763f1fca9235002ffee1ae724168e7f678f9ded05614f2628769a7d3716f",
+      "octets": 27084,
+      "mtime_utc": "2026-10-29T13:28:16Z"
+    },
+    {
+      "chemin": "web_cloud/traducteur_multimedia_resultats.json",
+      "sha256": "ae9a763f1fca9235002ffee1ae724168e7f678f9ded05614f2628769a7d3716f",
+      "octets": 27084,
+      "mtime_utc": "2026-10-29T13:28:16Z"
+    }
+  ],
+  "preuve_integrite": true,
+  "preuve_date_legale": false,
+  "limite": "Le manifeste prouve l'intégrité et l'ordre. Pour une date opposable : OpenTimestamps, dépôt public ou DOI résolvable. Le DOI déclaré renvoyait 404 à la vérification du 2026-10-29 : il ne vaut pas preuve en l'état. Le dépôt public GitHub est accessible."
+}

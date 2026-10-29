@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "source": {
+    "id": "-XKP4WKXUpI",
+    "url": "https://www.youtube.com/watch?v=-XKP4WKXUpI",
+    "horodatage_utc": "2026-10-29T12:50:33Z"
+  },
+  "titre": "L’IA vient-elle de tuer les mathématiques ?",
+  "auteur": "Numerama",
+  "duree_s": 1950,
+  "chapitres": [
+    {
+      "debut": "00:00",
+      "debut_s": 0,
+      "titre": "- Plongée dans la vie d'un mathématicien en 2026"
+    },
+    {
+      "debut": "04:38",
+      "debut_s": 278,
+      "titre": "- Un mathématicien, c'est quoi ?"
+    },
+    {
+      "debut": "06:14",
+      "debut_s": 374,
+      "titre": "- L'IA s'attaque aux maths"
+    },
+    {
+      "debut": "08:23",
+      "debut_s": 503,
+      "titre": "- Le vrai but des entreprises d'IA : science ou marketing ?"
+    },
+    {
+      "debut": "11:00",
+      "debut_s": 660,
+      "titre": "- Le métier de mathématicien doit évoluer"
+    },
+    {
+      "debut": "12:27",
+      "debut_s": 747,
+      "titre": "- Décoder des mathématiques des IA"
+    },
+    {
+      "debut": "14:27",
+      "debut_s": 867,
+      "titre": "- Sanctuariser les mathématiques pour les humains ?"
+    },
+    {
+      "debut": "15:56",
+      "debut_s": 956,
+      "titre": "- \"Faire le deuil\" des mathématiques qu'on connaît"
+    },
+    {
+      "debut": "18:29",
+      "debut_s": 1109,
+      "titre": "- La place des futurs mathématiciens remise en cause ?"
+    },
+    {
+      "debut": "21:02",
+      "debut_s": 1262,
+      "titre": "- La question du financement de la recherche"
+    },
+    {
+      "debut": "22:25",
+      "debut_s": 1345,
+      "titre": "- Des règles pour encadrer tout ça"
+    },
+    {
+      "debut": "23:36",
+      "debut_s": 1416,
+      "titre": "- Des désaccords sur la reconnaissance : le cas OpenAI / Buckmaster"
+    },
+    {
+      "debut": "25:08",
+      "debut_s": 1508,
+      "titre": "- \"Prendre le bateau\" ou apprendre à faire ce métier avec l'IA"
+    },
+    {
+      "debut": "27:49",
+      "debut_s": 1669,
+      "titre": "- Combiner humain et IA pour avancer en recherche"
+    },
+    {
+      "debut": "29:15",
+      "debut_s": 1755,
+      "titre": "- Est-ce la fin des maths ?"
+    },
+    {
+      "debut": "31:04",
+      "debut_s": 1864,
+      "titre": "- Bientôt l'IA ira dans d'autres domaines (chimie, physique ...)"
+    }
+  ],
+  "transcript": {
+    "etat": "absent",
+    "detail": "0 octet sur json3, srv3 et xml",
+    "mesures": [
+      "&fmt=json3=0",
+      "&fmt=srv3=0",
+      "xml=0"
+    ]
+  },
+  "avertissements": [
+    "aucun en-tete de chapitres : horodatages pris dans toute la description",
+    "timedtext repond sans contenu : le transcript est tenu pour absent"
+  ],
+  "resume": {
+    "chapitres": 16,
+    "transcript": "absent"
+  }
+}

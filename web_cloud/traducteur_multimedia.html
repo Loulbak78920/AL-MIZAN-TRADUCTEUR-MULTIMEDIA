@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traducteur multimédia Al-Mizan — de la vidéo au chemin canonique</title>
+<meta name="description" content="Seize chapitres d&#x27;une vidéo traduits en trames harmoniques, équations posées, ignorance bornée et sceau SHA-256 vérifiable.">
+<link rel="canonical" href="https://www.al-mizan.world/traducteur-multimedia">
+<link rel='alternate' hreflang='fr' href='https://www.al-mizan.world/traducteur-multimedia'>
+<link rel='alternate' hreflang='en' href='https://www.al-mizan.world/traducteur-multimedia/en'>
+<link rel='alternate' hreflang='ar' href='https://www.al-mizan.world/traducteur-multimedia/ar'>
+<link rel="alternate" hreflang="x-default" href="https://www.al-mizan.world/traducteur-multimedia">
+<meta property="og:title" content="Traducteur multimédia Al-Mizan — de la vidéo au chemin canonique">
+<meta property="og:description" content="Seize chapitres d&#x27;une vidéo traduits en trames harmoniques, équations posées, ignorance bornée et sceau SHA-256 vérifiable.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<style>
+:root{--encre:#10263a;--bleu:#1f5f8b;--pale:#f5f7fa;--or:#b45309;--gris:#5b6b7a;}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--encre);
+     background:#fbfcfd;line-height:1.62;font-size:17px}
+html[dir="rtl"] body{font-family:'Segoe UI',Tahoma,'Traditional Arabic',Arial,sans-serif}
+header.site{background:#0f2438;color:#eef4f9;padding:14px 22px;display:flex;flex-wrap:wrap;
+     gap:14px;align-items:center;justify-content:space-between;font-family:'Segoe UI',Arial,sans-serif}
+header.site a{color:#dce9f4;text-decoration:none;margin-left:16px;font-size:14px}
+header.site .marque{font-weight:700;letter-spacing:.06em;font-size:15px}
+header.site nav .langues{margin-left:14px;padding-left:12px;border-left:1px solid #34506a}
+header.site nav .langues a{margin-left:6px;padding:2px 7px;border:1px solid #34506a;border-radius:5px;font-size:12.5px}
+header.site nav .langues a.on{background:#dce9f4;color:#0f2438;border-color:#dce9f4;font-weight:700}
+html[dir="rtl"] header.site nav .langues{margin-left:0;padding-left:0;border-left:0;margin-right:14px;
+     padding-right:12px;border-right:1px solid #34506a}
+main{max-width:1120px;margin:0 auto;padding:30px 22px 60px}
+h1{font-size:32px;line-height:1.2;margin:10px 0 6px}
+h2{font-size:23px;margin-top:44px;border-bottom:1px solid #d7e0e8;padding-bottom:6px}
+h3{font-size:18px;margin:0 0 6px}
+p.lead{font-size:19px;color:#33475a}
+.badges{margin:14px 0 6px}
+.badges span{display:inline-block;font-family:'Segoe UI',Arial,sans-serif;font-size:12.5px;
+     margin:0 8px 8px 0;padding:4px 10px;border-radius:20px;border:1px solid #cfdbe6;
+     background:#eef4f9;color:#1f5f8b}
+.badges .or{background:#fdf3e7;border-color:#ecc79a;color:#8a4b06}
+.avertissement{margin:18px 0;padding:14px 16px;border-left:4px solid var(--or);
+     background:#fdf8f2;font-size:15.5px;color:#4a3a28}
+html[dir="rtl"] .avertissement{border-left:0;border-right:4px solid var(--or)}
+.tableau{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid #e2e9ef;vertical-align:top}
+html[dir="rtl"] th,html[dir="rtl"] td{text-align:right}
+th{font-family:'Segoe UI',Arial,sans-serif;font-size:12.5px;text-transform:uppercase;
+   letter-spacing:.05em;color:#5b6b7a;background:#f5f7fa}
+tbody tr:hover{background:#f8fbfd}
+td.id{white-space:nowrap;font-weight:700;color:#0f3d5c}
+.num{direction:ltr;unicode-bidi:embed;white-space:nowrap;text-align:left}
+.formule{display:block;font-family:Consolas,monospace;font-size:13.5px;color:#1f4e6b;background:#f4f8fb;
+     padding:10px 12px;border-radius:6px;overflow-x:auto;direction:ltr;text-align:left}
+.grille{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.eqcarte{border:1px solid #dde6ed;border-radius:10px;padding:16px 18px;background:#fff}
+.eqcarte .entete{display:flex;justify-content:space-between;align-items:center;
+     font-family:'Segoe UI',Arial,sans-serif;font-size:12.5px;color:#5b6b7a;margin-bottom:8px}
+.eqcarte .pose{font-size:15px;color:#33475a;margin:0 0 10px}
+.eqcarte .res{font-size:15px;margin:10px 0 0;padding:8px 10px;background:#f4f8fb;border-radius:6px}
+.eqcarte .lecture{font-size:15px;color:#3c4f61;margin:10px 0 0}
+.statut{display:inline-block;font-family:'Segoe UI',Arial,sans-serif;font-size:11.5px;
+     padding:2px 9px;border-radius:20px;border:1px solid #cfdbe6;background:#eef4f9;color:#1f5f8b}
+.statut.o{background:#eaf6ef;border-color:#bfe0cb;color:#1e6b3a}
+.statut.s{background:#fdf3e7;border-color:#ecc79a;color:#8a4b06}
+.statut.m{background:#f0eefc;border-color:#cfc6f2;color:#4b3a9a}
+.parcours{display:flex;height:40px;border:1px solid #d7e0e8;border-radius:6px;overflow:hidden;margin:16px 0}
+.parcours .seg{display:flex;align-items:center;justify-content:center;height:100%;
+     font-family:'Segoe UI',Arial,sans-serif;font-size:11px;color:#fff;overflow:hidden;white-space:nowrap}
+.parcours .seg span{padding:0 3px}
+.legende{font-size:13px;color:var(--gris);font-family:'Segoe UI',Arial,sans-serif}
+.phrase{margin:16px 0;padding:16px 18px;border-left:4px solid var(--bleu);background:#f4f8fb;font-size:16.5px}
+html[dir="rtl"] .phrase{border-left:0;border-right:4px solid var(--bleu)}
+.encadre{margin:18px 0;padding:14px 16px;border-left:4px solid var(--bleu);background:#f4f8fb}
+html[dir="rtl"] .encadre{border-left:0;border-right:4px solid var(--bleu)}
+ul{margin:10px 0 0;padding-left:20px}
+html[dir="rtl"] ul{padding-left:0;padding-right:20px}
+li{margin:6px 0}
+pre{background:#f6f8fa;border:1px solid #d7e0e8;border-radius:8px;padding:14px;overflow-x:auto;font-size:13.5px;direction:ltr;text-align:left}
+.actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.actions a{font-family:'Segoe UI',Arial,sans-serif;font-size:14px;text-decoration:none;
+     padding:9px 16px;border-radius:8px;border:1px solid #1f5f8b;color:#1f5f8b}
+.actions a.principal{background:#1f5f8b;color:#fff}
+.note-langue{font-size:13.5px;color:#5b6b7a;margin-top:10px}
+footer.site{background:#0f2438;color:#c9d9e6;padding:18px 22px;font-size:13.5px;
+     font-family:'Segoe UI',Arial,sans-serif;text-align:center}
+footer.site a{color:#dce9f4}
+@media (max-width:900px){.grille{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class='site'><div class='marque'>AL-MIZAN.WORLD</div><nav><a href='/'>Accueil</a><a href='/oeuvre-universelle'>Œuvre</a><a href='/observateur-triniter'>Observateur</a><a href='/portefeuille'>Portefeuille</a><a href='/developpeurs'>Développeurs</a><span class='langues'><a class='langue on' href='/traducteur-multimedia' hreflang='fr' lang='fr'>FR</a><a class='langue' href='/traducteur-multimedia/en' hreflang='en' lang='en'>EN</a><a class='langue' href='/traducteur-multimedia/ar' hreflang='ar' lang='ar'>العربية</a></span></nav></header>
+<main>
+
+<h1>Traducteur multimédia : de la vidéo au chemin canonique</h1>
+<p class="lead">Une vidéo entre ; une fiche vérifiable sort. Le traducteur ne traduit pas la parole absente : il traduit la structure observable — seize chapitres, des durées, des titres — en trames du pont asynchrone/synchrone, puis applique les équations du dossier et scelle le résultat.</p>
+<div class="badges">
+  <span>16 chapitres · 32 min 30 s</span>
+  <span>10/10 contrôles</span>
+  <span class="or">complétude 87,6 % — jamais 100 %</span>
+</div>
+<div class="avertissement"><strong>Ce que ce document ne fait pas.</strong> Il ne transcrit pas la parole : la vidéo ne renvoie aucun sous-titre (0 octet sur trois formats). Il ne traduit pas les titres en trois langues : ils restent cités en français, langue de la source. L&#x27;analyse, elle, est rédigée en français, anglais et arabe. Aucune équation n&#x27;est attribuée à la vidéo : ce sont celles du dossier, appliquées à des mesures.</div>
+
+<h2 id="source">La source et ses limites</h2>
+<p>Métadonnées obtenues par oEmbed et par la page publique de la vidéo, chapitres extraits des horodatages de la description. La fiche source est scellée avant tout calcul.</p>
+<div class='tableau'><table><tbody><tr><td>Titre</td><td>L’IA vient-elle de tuer les mathématiques ?</td></tr><tr><td>Chaîne</td><td>Numerama</td></tr><tr><td>Durée</td><td><span class='num'>1950 s</span></td></tr><tr><td>Transcript</td><td>absent — 0 octet (json3, srv3, xml)</td></tr><tr><td>SHA-256 de la fiche</td><td><span class='num'>126c9c3a6687bc43ac241e9c…</span></td></tr></tbody></table></div><p><a href='https://www.youtube.com/watch?v=-XKP4WKXUpI' rel='noopener'>https://www.youtube.com/watch?v=-XKP4WKXUpI</a></p>
+
+<h2 id="equations">Les équations, posées puis résolues</h2>
+<p>Sept équations, toutes issues du dossier. Chaque carte indique son statut : mesuré sur les chapitres, simulé par la doctrine, ou opérationnel comme code exécuté. Les énoncés formels restent en français, langue du dossier.</p>
+<div class='tableau'><table><thead><tr><th>ID</th><th>Objet</th><th>Formule</th><th>Résultat</th><th>Statut</th></tr></thead><tbody><tr><td class='id'><a href='#eq-01'>EQ-01</a></td><td>Trame harmonique déterministe</td><td><span class='formule'>Pour chaque chapitre k à s_k secondes : τ_k = round((s_k + 1)·dt, 3) ticks ; id_k = « TRM-WEBRTC_MULTIMODAL- » + SHA-256(id_vidéo|s_k|titre_k)[:10] ; v = (0.50, 0.02, 1.00, 0.9995, 0.05, 0.85, 1.00, 0.50, 0.00, 0.01, 0.6015, 0.6225) ; sceau_k = SHA-256(canonique(id_k, τ_k, v, payload_k)). Variante déterministe du pont : l&#x27;original horodate sur l&#x27;horloge murale.</span></td><td>16 trames · ids uniques = True · sceau de la dernière = 52f624ed85bd…</td><td><span class='statut o'>OPÉRATIONNEL</span></td></tr><tr><td class='id'><a href='#eq-02'>EQ-02</a></td><td>Composition et entropie</td><td><span class='formule'>d_k = s_{k+1} − s_k (d_N = D − s_N), p_k = d_k / D ; Σ p_k = 1. H = −Σ_{p_k&gt;0} p_k ln p_k ; H_norm = H / ln N.</span></td><td>Σp = 1 · H = 2.700576 · H_norm = 0.974027</td><td><span class='statut m'>MESURÉ</span></td></tr><tr><td class='id'><a href='#eq-03'>EQ-03</a></td><td>Seuil de parole</td><td><span class='formule'>P = { k | p_k ≥ θ }, θ = 0.08. Part nommée = Σ_{k∈P} p_k. Seuls les segments qui atteignent le seuil sont prononcés dans la lecture humaine.</span></td><td>3 segments ≥ 8 % · part nommée = 0.305641</td><td><span class='statut m'>MESURÉ</span></td></tr><tr><td class='id'><a href='#eq-04'>EQ-04</a></td><td>Ignorance bornée</td><td><span class='formule'>I_0 = 1 ; C_k = Σ_{j≤k} p_j ; I_brut,k = 1 − C_k ; cible_k = max(0.122 ; I_brut,k) ; γ_k = min(0.6225 ; max(0 ; (I_{k−1} − cible_k) / (I_{k−1} − 0.122 + ε))) ; I_k = 0.122 + (I_{k−1} − 0.122)(1 − γ_k). Ainsi I_k ≥ cible_k et I_k ≥ 0.122 : la complétude tend vers 1 − 0.122 sans jamais 1.</span></td><td>I₁₆ = 0.124126 · complétude = 0.875874 · plancher respecté = True</td><td><span class='statut s'>SIMULÉ</span></td></tr><tr><td class='id'><a href='#eq-05'>EQ-05</a></td><td>Traduction humaine</td><td><span class='formule'>T = Phrase((titre_k, p_k)_{k∈P triés par p décroissant} ; résidu = 1 − part nommée ; H_norm). T est déterministe et falsifiable : chaque titre prononcé est celui de la source, aucune intention ni entité n&#x27;est ajoutée.</span></td><td>3 titres nommés · rejeu identique = True</td><td><span class='statut o'>OPÉRATIONNEL</span></td></tr><tr><td class='id'><a href='#eq-06'>EQ-06</a></td><td>Continuité dossier ↔ site</td><td><span class='formule'>K = Π_{a∈A} 1_{page fr, en, ar présente} · 1_{route servie} · 1_{sitemap présent} · 1_{test présent}. La capacité n&#x27;est dite publiée que si K = 1 ; sinon elle reste « spécifiée non publiée ».</span></td><td>K = 5/5 · publiable = True</td><td><span class='statut m'>MESURÉ</span></td></tr><tr><td class='id'><a href='#eq-07'>EQ-07</a></td><td>Scellement et antériorité</td><td><span class='formule'>S = SHA-256(canonique(noyau)) ; racine Merkle R = Merkle(SHA-256(fichier_i)) sur la fiche source, le module, le générateur, les trois pages et le JSON. Le manifeste prouve l&#x27;intégrité et l&#x27;ordre ; il ne prouve pas à lui seul une date légalement opposable (ancre tierce : OpenTimestamps, dépôt ou DOI).</span></td><td>sceau du noyau = 7ed2c8a84fbb2b53…</td><td><span class='statut o'>OPÉRATIONNEL</span></td></tr></tbody></table></div>
+<div class='grille'><article class='eqcarte' id='eq-01'><div class='entete'><span class='id'>EQ-01</span><span class='statut o'>OPÉRATIONNEL</span></div><h3>Trame harmonique déterministe</h3><p class='pose'>Chaque chapitre devient une trame datée sur dt, avec un identifiant et un sceau reproductibles.</p><div class='formule'>Pour chaque chapitre k à s_k secondes : τ_k = round((s_k + 1)·dt, 3) ticks ; id_k = « TRM-WEBRTC_MULTIMODAL- » + SHA-256(id_vidéo|s_k|titre_k)[:10] ; v = (0.50, 0.02, 1.00, 0.9995, 0.05, 0.85, 1.00, 0.50, 0.00, 0.01, 0.6015, 0.6225) ; sceau_k = SHA-256(canonique(id_k, τ_k, v, payload_k)). Variante déterministe du pont : l&#x27;original horodate sur l&#x27;horloge murale.</div><p class='res'><strong>Résultat :</strong> 16 trames · ids uniques = True · sceau de la dernière = 52f624ed85bd…</p><p class='lecture'>Le pont d&#x27;origine horodate sur l&#x27;horloge murale ; cette variante fige l&#x27;horodatage pour permettre le rejeu.</p></article><article class='eqcarte' id='eq-02'><div class='entete'><span class='id'>EQ-02</span><span class='statut m'>MESURÉ</span></div><h3>Composition et entropie</h3><p class='pose'>Les durées se répartissent en parts qui somment à 1 ; l&#x27;entropie mesure l&#x27;égalité de cette répartition.</p><div class='formule'>d_k = s_{k+1} − s_k (d_N = D − s_N), p_k = d_k / D ; Σ p_k = 1. H = −Σ_{p_k&gt;0} p_k ln p_k ; H_norm = H / ln N.</div><p class='res'><strong>Résultat :</strong> Σp = 1 · H = 2.700576 · H_norm = 0.974027</p><p class='lecture'>H_norm proche de 1 signifie des segments de tailles comparables.</p></article><article class='eqcarte' id='eq-03'><div class='entete'><span class='id'>EQ-03</span><span class='statut m'>MESURÉ</span></div><h3>Seuil de parole</h3><p class='pose'>Seuls les segments qui atteignent 8 % du temps sont prononcés dans la phrase humaine.</p><div class='formule'>P = { k | p_k ≥ θ }, θ = 0.08. Part nommée = Σ_{k∈P} p_k. Seuls les segments qui atteignent le seuil sont prononcés dans la lecture humaine.</div><p class='res'><strong>Résultat :</strong> 3 segments ≥ 8 % · part nommée = 0.305641</p><p class='lecture'>Le seuil vient du dossier ; il évite de nommer quinze miettes.</p></article><article class='eqcarte' id='eq-04'><div class='entete'><span class='id'>EQ-04</span><span class='statut s'>SIMULÉ</span></div><h3>Ignorance bornée</h3><p class='pose'>La couverture croît avec les chapitres ; l&#x27;ignorance descend vers 0,122 sans jamais passer dessous.</p><div class='formule'>I_0 = 1 ; C_k = Σ_{j≤k} p_j ; I_brut,k = 1 − C_k ; cible_k = max(0.122 ; I_brut,k) ; γ_k = min(0.6225 ; max(0 ; (I_{k−1} − cible_k) / (I_{k−1} − 0.122 + ε))) ; I_k = 0.122 + (I_{k−1} − 0.122)(1 − γ_k). Ainsi I_k ≥ cible_k et I_k ≥ 0.122 : la complétude tend vers 1 − 0.122 sans jamais 1.</div><p class='res'><strong>Résultat :</strong> I₁₆ = 0.124126 · complétude = 0.875874 · plancher respecté = True</p><p class='lecture'>Le plafond γ = 0,6225 ralentit la chute : c&#x27;est la bride, pas un défaut.</p></article><article class='eqcarte' id='eq-05'><div class='entete'><span class='id'>EQ-05</span><span class='statut o'>OPÉRATIONNEL</span></div><h3>Traduction humaine</h3><p class='pose'>La phrase est une fonction déterministe des titres et des parts ; rien n&#x27;est ajouté.</p><div class='formule'>T = Phrase((titre_k, p_k)_{k∈P triés par p décroissant} ; résidu = 1 − part nommée ; H_norm). T est déterministe et falsifiable : chaque titre prononcé est celui de la source, aucune intention ni entité n&#x27;est ajoutée.</div><p class='res'><strong>Résultat :</strong> 3 titres nommés · rejeu identique = True</p><p class='lecture'>Rejouer donne la même phrase et le même sceau.</p></article><article class='eqcarte' id='eq-06'><div class='entete'><span class='id'>EQ-06</span><span class='statut m'>MESURÉ</span></div><h3>Continuité dossier ↔ site</h3><p class='pose'>La capacité n&#x27;est publiée que si page, route, JSON, sitemap et test existent ensemble.</p><div class='formule'>K = Π_{a∈A} 1_{page fr, en, ar présente} · 1_{route servie} · 1_{sitemap présent} · 1_{test présent}. La capacité n&#x27;est dite publiée que si K = 1 ; sinon elle reste « spécifiée non publiée ».</div><p class='res'><strong>Résultat :</strong> K = 5/5 · publiable = True</p><p class='lecture'>Un seul indicateur manquant et la capacité reste « spécifiée non publiée ».</p></article><article class='eqcarte' id='eq-07'><div class='entete'><span class='id'>EQ-07</span><span class='statut o'>OPÉRATIONNEL</span></div><h3>Scellement et antériorité</h3><p class='pose'>Le noyau est scellé ; les fichiers sont listés par empreinte et racine Merkle.</p><div class='formule'>S = SHA-256(canonique(noyau)) ; racine Merkle R = Merkle(SHA-256(fichier_i)) sur la fiche source, le module, le générateur, les trois pages et le JSON. Le manifeste prouve l&#x27;intégrité et l&#x27;ordre ; il ne prouve pas à lui seul une date légalement opposable (ancre tierce : OpenTimestamps, dépôt ou DOI).</div><p class='res'><strong>Résultat :</strong> sceau du noyau = 7ed2c8a84fbb2b53…</p><p class='lecture'>L&#x27;intégrité est prouvée ; la date opposable exige un ancrage tiers.</p></article></div>
+
+<h2 id="chemin">Le chemin, du début à la fin</h2>
+<p>Chaque segment porte sa part du temps ; la trajectoire d&#x27;ignorance est calculée pas à pas, sans jamais franchir le plancher doctrinal.</p>
+<div class='parcours'><div class='seg' style='width:14.256410%;background:#1f5f8b' title='00:00 — Plongée dans la vie d&#x27;un mathématicien en 2026 — 14,3 %'><span>00:00</span></div><div class='seg' style='width:4.923077%;background:#2f7fae' title='04:38 — Un mathématicien, c&#x27;est quoi ? — 4,9 %'></div><div class='seg' style='width:6.615385%;background:#4b93bd' title='06:14 — L&#x27;IA s&#x27;attaque aux maths — 6,6 %'></div><div class='seg' style='width:8.051282%;background:#6fa9c9' title='08:23 — Le vrai but des entreprises d&#x27;IA : science ou marketing ? — 8,1 %'><span>08:23</span></div><div class='seg' style='width:4.461538%;background:#8bbbd6' title='11:00 — Le métier de mathématicien doit évoluer — 4,5 %'></div><div class='seg' style='width:6.153846%;background:#1f5f8b' title='12:27 — Décoder des mathématiques des IA — 6,2 %'></div><div class='seg' style='width:4.564103%;background:#2f7fae' title='14:27 — Sanctuariser les mathématiques pour les humains ? — 4,6 %'></div><div class='seg' style='width:7.846154%;background:#4b93bd' title='15:56 — &quot;Faire le deuil&quot; des mathématiques qu&#x27;on connaît — 7,8 %'></div><div class='seg' style='width:7.846154%;background:#6fa9c9' title='18:29 — La place des futurs mathématiciens remise en cause ? — 7,8 %'></div><div class='seg' style='width:4.256410%;background:#8bbbd6' title='21:02 — La question du financement de la recherche — 4,3 %'></div><div class='seg' style='width:3.641026%;background:#1f5f8b' title='22:25 — Des règles pour encadrer tout ça — 3,6 %'></div><div class='seg' style='width:4.717949%;background:#2f7fae' title='23:36 — Des désaccords sur la reconnaissance : le cas OpenAI / Buckmaster — 4,7 %'></div><div class='seg' style='width:8.256410%;background:#4b93bd' title='25:08 — &quot;Prendre le bateau&quot; ou apprendre à faire ce métier avec l&#x27;IA — 8,3 %'><span>25:08</span></div><div class='seg' style='width:4.410256%;background:#6fa9c9' title='27:49 — Combiner humain et IA pour avancer en recherche — 4,4 %'></div><div class='seg' style='width:5.589744%;background:#8bbbd6' title='29:15 — Est-ce la fin des maths ? — 5,6 %'></div><div class='seg' style='width:4.410256%;background:#1f5f8b' title='31:04 — Bientôt l&#x27;IA ira dans d&#x27;autres domaines (chimie, physique ...) — 4,4 %'></div></div><p class='legende'>Largeur = part du temps ; seuls les segments ≥ 8 % affichent leur début.</p>
+<h3 id="chapitres">Les seize étapes</h3>
+<div class='tableau'><table><thead><tr><th>#</th><th>Début</th><th>Durée</th><th>Part</th><th>Cumul</th><th>γ</th><th>I_k</th><th>Complétude</th><th>Trame</th></tr></thead><tbody><tr><td class='num'>1</td><td class='num'>00:00</td><td class='num'>278 s</td><td class='num'>14,3 %</td><td class='num'>14,3 %</td><td class='num'>0,1624</td><td class='num'>0,8574</td><td class='num'>14,3 %</td><td class='num'>4fa6caf1ec</td></tr><tr><td class='num'>2</td><td class='num'>04:38</td><td class='num'>96 s</td><td class='num'>4,9 %</td><td class='num'>19,2 %</td><td class='num'>0,0669</td><td class='num'>0,8082</td><td class='num'>19,2 %</td><td class='num'>1f643f35b1</td></tr><tr><td class='num'>3</td><td class='num'>06:14</td><td class='num'>129 s</td><td class='num'>6,6 %</td><td class='num'>25,8 %</td><td class='num'>0,0964</td><td class='num'>0,7421</td><td class='num'>25,8 %</td><td class='num'>6a789a041c</td></tr><tr><td class='num'>4</td><td class='num'>08:23</td><td class='num'>157 s</td><td class='num'>8,1 %</td><td class='num'>33,8 %</td><td class='num'>0,1298</td><td class='num'>0,6615</td><td class='num'>33,8 %</td><td class='num'>91f3ba33f7</td></tr><tr><td class='num'>5</td><td class='num'>11:00</td><td class='num'>87 s</td><td class='num'>4,5 %</td><td class='num'>38,3 %</td><td class='num'>0,0827</td><td class='num'>0,6169</td><td class='num'>38,3 %</td><td class='num'>e12ffce802</td></tr><tr><td class='num'>6</td><td class='num'>12:27</td><td class='num'>120 s</td><td class='num'>6,2 %</td><td class='num'>44,5 %</td><td class='num'>0,1243</td><td class='num'>0,5554</td><td class='num'>44,5 %</td><td class='num'>f96102765a</td></tr><tr><td class='num'>7</td><td class='num'>14:27</td><td class='num'>89 s</td><td class='num'>4,6 %</td><td class='num'>49,0 %</td><td class='num'>0,1053</td><td class='num'>0,5097</td><td class='num'>49,0 %</td><td class='num'>7de2c50aff</td></tr><tr><td class='num'>8</td><td class='num'>15:56</td><td class='num'>153 s</td><td class='num'>7,8 %</td><td class='num'>56,9 %</td><td class='num'>0,2024</td><td class='num'>0,4313</td><td class='num'>56,9 %</td><td class='num'>f2d8a3a10d</td></tr><tr><td class='num'>9</td><td class='num'>18:29</td><td class='num'>153 s</td><td class='num'>7,8 %</td><td class='num'>64,7 %</td><td class='num'>0,2537</td><td class='num'>0,3528</td><td class='num'>64,7 %</td><td class='num'>533e0cff0e</td></tr><tr><td class='num'>10</td><td class='num'>21:02</td><td class='num'>83 s</td><td class='num'>4,3 %</td><td class='num'>69,0 %</td><td class='num'>0,1844</td><td class='num'>0,3103</td><td class='num'>69,0 %</td><td class='num'>22c00fad09</td></tr><tr><td class='num'>11</td><td class='num'>22:25</td><td class='num'>71 s</td><td class='num'>3,6 %</td><td class='num'>72,6 %</td><td class='num'>0,1934</td><td class='num'>0,2738</td><td class='num'>72,6 %</td><td class='num'>f5b2a8b4b7</td></tr><tr><td class='num'>12</td><td class='num'>23:36</td><td class='num'>92 s</td><td class='num'>4,7 %</td><td class='num'>77,3 %</td><td class='num'>0,3107</td><td class='num'>0,2267</td><td class='num'>77,3 %</td><td class='num'>79de545bf1</td></tr><tr><td class='num'>13</td><td class='num'>25:08</td><td class='num'>161 s</td><td class='num'>8,3 %</td><td class='num'>85,6 %</td><td class='num'>0,6225</td><td class='num'>0,1615</td><td class='num'>83,8 %</td><td class='num'>f66605d9c5</td></tr><tr><td class='num'>14</td><td class='num'>27:49</td><td class='num'>86 s</td><td class='num'>4,4 %</td><td class='num'>90,0 %</td><td class='num'>0,6225</td><td class='num'>0,1369</td><td class='num'>86,3 %</td><td class='num'>f2b0f9774c</td></tr><tr><td class='num'>15</td><td class='num'>29:15</td><td class='num'>109 s</td><td class='num'>5,6 %</td><td class='num'>95,6 %</td><td class='num'>0,6225</td><td class='num'>0,1276</td><td class='num'>87,2 %</td><td class='num'>759b91bf3a</td></tr><tr><td class='num'>16</td><td class='num'>31:04</td><td class='num'>86 s</td><td class='num'>4,4 %</td><td class='num'>100,0 %</td><td class='num'>0,6225</td><td class='num'>0,1241</td><td class='num'>87,6 %</td><td class='num'>2c0393c353</td></tr></tbody></table></div>
+
+<h2 id="traduction">La traduction humaine</h2>
+<p>Une phrase déterministe, construite uniquement avec les titres de la source et les nombres calculés. Rejouer le module produit exactement la même phrase et le même sceau.</p>
+<p class="phrase">Le chemin va de « Plongée dans la vie d&#x27;un mathématicien en 2026 » (14 %) à « Bientôt l&#x27;IA ira dans d&#x27;autres domaines (chimie, physique ...) » (4 %) en 16 étapes ; 3 segments portent au moins 8 % du temps (31 % du chemin) : « Plongée dans la vie d&#x27;un mathématicien en 2026 » (14 %) ; « &quot;Prendre le bateau&quot; ou apprendre à faire ce métier avec l&#x27;IA » (8 %) ; « Le vrai but des entreprises d&#x27;IA : science ou marketing ? » (8 %). L&#x27;ignorance résiduelle se stabilise à 12,4 %, au-dessus du plancher doctrinal de 12,2 % ; la complétude atteint 87,6 % et ne franchit jamais 100 % : lecture de modèle, pas une mesure de la parole.</p>
+
+<h2 id="difficultes">Difficultés rencontrées et réponses</h2>
+<p>Chaque difficulté est nommée, puis traitée par une règle vérifiable — jamais contournée par une affirmation.</p>
+<div class='tableau'><table><thead><tr><th>Difficulté</th><th>Réponse</th></tr></thead><tbody><tr><td>Transcript absent</td><td>La vidéo renvoie 0 octet sur json3, srv3 et xml : aucune parole n&#x27;est accessible. Réponse : ne rien inventer ; calculer sur les chapitres et le dire.</td></tr><tr><td>La vidéo ne contient pas d&#x27;équations</td><td>Réponse : les équations sont celles du dossier AL-MIZAN ; elles sont appliquées à des mesures de chapitres et ne sont jamais attribuées à la vidéo.</td></tr><tr><td>« Complétude complète »</td><td>Réponse bornée : la doctrine interdit 100 %. La page affiche la complétude atteinte (87,6 %) et le plancher d&#x27;ignorance (12,2 %), avec la preuve par construction.</td></tr><tr><td>Trois langues</td><td>Réponse : l&#x27;analyse est rédigée en FR/EN/AR ; les titres restent en français d&#x27;origine, faute de traducteur contenu dans le dossier. Aucune traduction automatique n&#x27;est revendiquée.</td></tr><tr><td>Publication publique</td><td>Réponse : K = 5/5 (pages FR/EN/AR, route, JSON, sitemap, test). Sans K = 1, la page ne serait pas déployée.</td></tr><tr><td>Antériorité</td><td>Réponse : sceau SHA-256 + racine Merkle + horodatage UTC ; DOI public antérieur pour l&#x27;auteur. La date légalement opposable reste à ancrer (OTS, dépôt, DOI).</td></tr></tbody></table></div>
+
+<h2 id="anteriorite">Sceau et antériorité</h2>
+<p>Le sceau couvre le noyau canonique ; le manifeste couvre les fichiers : un pair peut vérifier leur intégrité et leur ordre en recalculant la racine. Le dépôt public GitHub est accessible et porte ces artefacts ; le DOI déclaré, lui, ne se résout pas au 29 octobre 2026 (404) et n&#x27;est donc pas présenté comme preuve. La date opposable de cette page reste à ancrer chez un tiers.</p>
+
+<div class='tableau'><table><thead><tr><th>Fichier</th><th>SHA-256</th></tr></thead>
+<tbody><tr><td><span class='num'>donnees/source_video_-XKP4WKXUpI.json</span></td><td><span class='num'>126c9c3a6687bc43ac241e9c6b835042…</span></td></tr><tr><td><span class='num'>oeuvre_universelle/traducteur_multimedia.py</span></td><td><span class='num'>453f9f7d841350eb94b693b9f7f138fc…</span></td></tr><tr><td><span class='num'>oeuvre_universelle/generer_page_traducteur_multimedia.py</span></td><td><span class='num'>042c7d31db4b116c8b22925c3173d86a…</span></td></tr></tbody></table></div>
+<div class='encadre'>
+<p><strong>Racine Merkle des sources :</strong> <span class='num'>108ea2479fe329bbf8e3ac33fde05c95ee7109b2636c6ffbe7b8a96ffbc87d04</span></p>
+<p><strong>Sceau du noyau :</strong> <span class='num'>7ed2c8a84fbb2b53c7acb113877e430a1af2182d08af0f100fb17940381b5162</span></p>
+<p><strong>Horodatage UTC de génération :</strong> <span class='num'>2026-10-29T13:28:16Z</span></p>
+<p><strong>Auteur :</strong> M. Ahmed EL BAHLOUL (IMAM8MAHDI)</p>
+<p><strong>DOI déclaré (404 au 2026-10-29) :</strong> <a href='https://doi.org/10.5281/zenodo.23554838' rel='noopener'>10.5281/zenodo.23554838</a></p>
+<p><strong>Dépôt public GitHub :</strong> <a href='https://github.com/Loulbak78920/AL-MIZAN-TRADUCTEUR-MULTIMEDIA' rel='noopener'>https://github.com/Loulbak78920/AL-MIZAN-TRADUCTEUR-MULTIMEDIA</a></p>
+<p><strong>Vérification par un pair :</strong>
+<a href='/traducteur-multimedia/manifeste.json' rel='noopener'>manifeste_sha256.json</a> ·
+<a href='/traducteur-multimedia/source.json' rel='noopener'>source_video_-XKP4WKXUpI.json</a> ·
+<a href='/traducteur-multimedia/code/traducteur_multimedia.py' rel='noopener'>traducteur_multimedia.py</a> ·
+<a href='/traducteur-multimedia/code/generer_page_traducteur_multimedia.py' rel='noopener'>generer_page_traducteur_multimedia.py</a></p>
+</div>
+<div class='avertissement'>Le manifeste prouve l&#x27;intégrité et l&#x27;ordre des fichiers. Il ne prouve pas à lui seul une date légalement opposable : pour cela, ancrer la racine via OpenTimestamps, un dépôt ou un DOI.</div>
+
+
+<h2 id="reproductibilite">Reproduire et vérifier</h2>
+<pre>py -3 oeuvre_universelle/traducteur_multimedia.py
+py -3 oeuvre_universelle/generer_page_traducteur_multimedia.py
+py -3 -m unittest tests.test_traducteur_multimedia -v</pre>
+<p>Trois commandes suffisent : calcul, rendu, tests. Le JSON public expose les mêmes nombres que cette page.</p>
+
+<h2 id="limites">Limites assumées</h2>
+<ul><li>La vidéo ne fournit aucun transcript : la parole n&#x27;est ni transcrite ni traduite.</li><li>Les titres de chapitres sont cités dans leur langue d&#x27;origine (français) ; aucune traduction automatique n&#x27;est revendiquée.</li><li>Les équations sont celles du dossier AL-MIZAN, appliquées à des mesures de chapitres ; elles ne sont pas attribuées à la vidéo.</li><li>Le calcul est borné : l&#x27;ignorance ne descend jamais sous LIGNE_REF = 0.122, donc la complétude ne vaut jamais 100 %.</li><li>Le manifeste SHA-256 prouve l&#x27;intégrité et l&#x27;ordre, pas une date légalement opposable.</li></ul>
+
+<div class="actions">
+  <a class="principal" href="/traducteur-multimedia.json">Télécharger le JSON</a>
+  <a href="/oeuvre-universelle">Retour à l&#x27;œuvre</a>
+  <a href="https://www.youtube.com/watch?v=-XKP4WKXUpI" rel="noopener">Voir la vidéo source</a>
+</div>
+<p class="note-langue">Titres de chapitres cités en français d&#x27;origine ; analyse rédigée en français, anglais et arabe.</p>
+
+</main>
+<footer class='site'>AL-MIZAN × ASTRO-Q°ODE — M. Ahmed EL BAHLOUL (IMAM8MAHDI). Page générée depuis le dossier local ; aucune donnée personnelle au-delà du nom public.</footer>
+</body>
+</html>

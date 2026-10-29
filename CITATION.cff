@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Citer ce lot avec ses empreintes ; voir le manifeste pour la vérification."
+title: "AL-MIZAN — traducteur multimédia (lot scellé)"
+abstract: >-
+  Lot vérifiable issu du dossier AL-MIZAN / ASTRO-Q°ODE appliqué aux seize chapitres de la
+  vidéo -XKP4WKXUpI. Contient les entrées, les scripts de calcul et de rendu, les sorties
+  trilingues et le manifeste SHA-256 avec racine Merkle. Prouve l'intégrité et l'ordre des
+  fichiers ; ne prouve pas une date légalement opposable.
+authors:
+  - family-names: EL BAHLOUL
+    given-names: Ahmed
+    alias: IMAM8MAHDI
+date-released: "2026-10-29"
+license: "GPL-3.0-only OR AGPL-3.0-only"
+repository-code: "https://github.com/Loulbak78920/AL-MIZAN-TRADUCTEUR-MULTIMEDIA"
+url: "https://www.al-mizan.world/traducteur-multimedia"
+keywords:
+  - AL-MIZAN
+  - ASTRO-QODE
+  - integrite
+  - merkle
+  - sha256
+  - reproductibilite
